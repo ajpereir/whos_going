@@ -1,0 +1,23 @@
+.add-trip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.add-trip-stepper {
+    width: 100%;
+}
+
+.add-trip-details-bottom {
+    display: flex;
+}
+
+.add-trip-submit {
+    align-self: flex-end;
+    padding: 0 5px 5px 0;
+}
+
+.add-trip-paper {
+    margin-bottom: 10px;
+}

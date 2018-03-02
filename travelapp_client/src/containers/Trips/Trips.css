@@ -1,0 +1,7 @@
+.trips-component {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+
+    /* background-color: blue; */
+}

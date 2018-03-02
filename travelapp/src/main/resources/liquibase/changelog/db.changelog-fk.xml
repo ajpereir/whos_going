@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="set_traveller_fk" author="ajpereira">
+        <addForeignKeyConstraint baseColumnNames="fk_traveller_id"
+                                 baseTableName="trip"
+                                 constraintName="fk_traveller_id"
+                                 deferrable="true"
+                                 initiallyDeferred="true"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="traveller_id"
+                                 referencedTableName="traveller"/>
+    </changeSet>
+
+    <changeSet id="set_city_origin_fk" author="ajpereira">
+        <addForeignKeyConstraint baseColumnNames="fk_city_origin_id"
+                                 baseTableName="trip"
+                                 constraintName="fk_city_origin_id"
+                                 deferrable="true"
+                                 initiallyDeferred="true"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="city_id"
+                                 referencedTableName="city"/>
+    </changeSet>
+
+    <changeSet id="set_city_destination_fk" author="ajpereira">
+        <addForeignKeyConstraint baseColumnNames="fk_city_destination_id"
+                                 baseTableName="trip"
+                                 constraintName="fk_city_destination_id"
+                                 deferrable="true"
+                                 initiallyDeferred="true"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="city_id"
+                                 referencedTableName="city"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,8 @@
+.travel-app {
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10px;
+}
